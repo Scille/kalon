@@ -2,10 +2,10 @@ from datetime import datetime
 from mongoengine import ValidationError
 from string import ascii_uppercase, ascii_lowercase, digits, punctuation
 
-from core.model_util import BaseController, BaseSolrSearcher, BaseDocument, fields
+from kalon.model_util import BaseController, BaseSolrSearcher, BaseDocument, fields
 
-from xin.tasks.email import default_mail, mail, default_subject
-from xin.roles import ROLES
+from sample.tasks.email import default_mail, mail, default_subject
+from sample.roles import ROLES
 
 
 def generate_password(length=12):
@@ -23,11 +23,11 @@ class UserController(BaseController):
 
     def set_password(self, password):
         """Store the password encrypted (i.e. hashed&salted)"""
-        from core.auth import encrypt_password
+        from kalon.auth import encrypt_password
         self.document.password = encrypt_password(password)
 
     def set_password_and_email(self):
-        from core.auth import encrypt_password
+        from kalon.auth import encrypt_password
         clear_pwd = generate_password()
         self.document.password = encrypt_password(clear_pwd)
         # send email

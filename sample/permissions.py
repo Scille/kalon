@@ -5,7 +5,7 @@ access rights policy
 
 from flask.ext.principal import Permission, ActionNeed
 
-from core.tools import Tree
+from kalon.tools import Tree
 
 
 class Policy:

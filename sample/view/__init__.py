@@ -1,8 +1,8 @@
-from core import CoreResource, CoreApi
-from core.view_util import history_api
+from kalon import CoreResource, CoreApi
+from kalon.view_util import history_api
 
-from xin.view import user_api
-from xin.model import user
+from sample.view import user_api
+from sample.model import user
 
 
 api = CoreApi()

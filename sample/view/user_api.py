@@ -1,12 +1,12 @@
 from flask import request, url_for
 
-from core.tools import abort, get_search_urlargs, check_if_match
-from core.auth import current_user, is_fresh_auth
-from core import CoreResource, view_util
+from kalon.tools import abort, get_search_urlargs, check_if_match
+from kalon.auth import current_user, is_fresh_auth
+from kalon import CoreResource, view_util
 
-from xin.permissions import POLICIES as p
-from xin.model.user import User
-from xin.events import EVENTS as e
+from sample.permissions import POLICIES as p
+from sample.model.user import User
+from sample.events import EVENTS as e
 
 
 User.set_link_builder_from_api('UserAPI')

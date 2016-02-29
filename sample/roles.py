@@ -2,7 +2,7 @@
 Role&permissions management
 """
 
-from xin.permissions import POLICIES
+from sample.permissions import POLICIES
 
 
 ROLES = {
