@@ -2,7 +2,7 @@ from functools import wraps
 from flask import request
 from flask.ext.restful import unpack
 
-from core.tools import abort
+from kalon.tools import abort
 
 
 class ConcurrencyError(Exception):

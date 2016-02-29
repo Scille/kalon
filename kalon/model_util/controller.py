@@ -1,6 +1,6 @@
 from flask.ext.mongoengine import mongoengine, Document
 
-from core.tools import abort
+from kalon.tools import abort
 
 
 class BaseController:

@@ -1,9 +1,9 @@
 from flask import url_for
 from flask.ext.mongoengine import Document
 
-from core.model_util.version import HistorizedDocument
-from core.model_util.searcher import SearchableDocument
-from core.model_util.controller import ControlledDocument
+from kalon.model_util.version import HistorizedDocument
+from kalon.model_util.searcher import SearchableDocument
+from kalon.model_util.controller import ControlledDocument
 
 
 class LinkedDocument(Document):

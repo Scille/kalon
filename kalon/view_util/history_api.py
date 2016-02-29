@@ -1,9 +1,9 @@
 from flask import url_for
 from collections import namedtuple
 
-from core.tools import get_pagination_urlargs, abort
-from core import CoreResource, view_util
-from xin.permissions import POLICIES as p
+from kalon.tools import get_pagination_urlargs, abort
+from kalon import CoreResource, view_util
+from sample.permissions import POLICIES as p  # TODO remove me !
 
 
 HistoryAPI = namedtuple('HistoryAPI', ('item', 'endpoint', 'list',

@@ -4,10 +4,10 @@ from mongoengine import ValidationError as MongoValidationError
 from tests import common
 from tests.fixtures import *
 
-from core.model_util import (Document, HistorizedDocument, BaseController,
-                             ControlledDocument, VersionedDocument)
-from core.concurrency import ConcurrencyError
-from xin.model import fields
+from kalon.model_util import (Document, HistorizedDocument, BaseController,
+                              ControlledDocument, VersionedDocument)
+from kalon.concurrency import ConcurrencyError
+from sample.model import fields
 
 class TestController(common.BaseTest):
 

@@ -25,8 +25,8 @@ from flask.ext.principal import (Identity, ActionNeed, UserNeed,
                                  AnonymousIdentity, identity_changed)
 from werkzeug.local import LocalProxy
 
-from core.tools import abort
-from core.api import CoreApi
+from kalon.tools import abort
+from kalon.api import CoreApi
 
 
 # A proxy for the current user. If no user is logged in, returns None

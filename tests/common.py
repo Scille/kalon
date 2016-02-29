@@ -1,8 +1,8 @@
 import json
 import pytest
 from collections import namedtuple
-from xin.main import bootstrap_app, create_app
-from core.auth import generate_access_token
+from sample.main import bootstrap_app, create_app
+from kalon.auth import generate_access_token
 
 
 class NOT_SET:

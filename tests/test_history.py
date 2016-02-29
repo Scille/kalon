@@ -2,11 +2,11 @@ from tests import common
 import pytest
 from tests.test_auth import user
 
-from core.model_util import fields, HistorizedDocument
-from core.concurrency import ConcurrencyError
+from kalon.model_util import fields, HistorizedDocument
+from kalon.concurrency import ConcurrencyError
 
-from xin.permissions import POLICIES as p
-from xin.model.user import User
+from sample.permissions import POLICIES as p
+from sample.model.user import User
 
 
 DEFAULT_USER_PAYLOAD = {

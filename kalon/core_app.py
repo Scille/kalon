@@ -4,8 +4,8 @@ from flask.ext.principal import Principal
 from flask.ext import restful, cors
 from flask.ext.mongoengine import MongoEngine
 
-from core.encoders import dynamic_json_encoder_factory, ObjectIdConverter, JsonRequest
-from core.solr import Solr
+from kalon.encoders import dynamic_json_encoder_factory, ObjectIdConverter, JsonRequest
+from kalon.solr import Solr
 
 
 class CoreApp(Flask):

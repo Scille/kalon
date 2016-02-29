@@ -3,8 +3,8 @@ import mongoengine
 from pysolr import SolrError
 from flask import current_app
 
-from core.tools import list_to_pagination
-from core.model_util.version import VersionedDocument
+from kalon.tools import list_to_pagination
+from kalon.model_util.version import VersionedDocument
 
 
 class AsbFieldSolrConverter:

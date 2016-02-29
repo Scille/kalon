@@ -5,9 +5,9 @@ from datetime import datetime, timedelta
 from tests import common
 from tests.test_auth import user
 
-from xin.model.user import User
-from xin.permissions import POLICIES as p
-from xin.tasks.email import mail
+from sample.model.user import User
+from sample.permissions import POLICIES as p
+from sample.tasks.email import mail
 
 
 @pytest.fixture

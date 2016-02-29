@@ -7,7 +7,7 @@ from flask import Request
 from flask_mongoengine.pagination import Pagination
 from mongoengine import Document
 
-from core.view_util.fields import LinkedGenericReference
+from kalon.view_util.fields import LinkedGenericReference
 
 
 class JsonRequest(Request):

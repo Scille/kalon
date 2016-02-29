@@ -3,7 +3,7 @@ import pytest
 from tests import common
 from tests.test_auth import user
 
-from xin.permissions import POLICIES as p
+from sample.permissions import POLICIES as p
 
 
 class TestRole(common.BaseTest):
@@ -11,24 +11,24 @@ class TestRole(common.BaseTest):
     @classmethod
     def setup_class(cls):
         # Monkey patch roles
-        import xin.roles
-        from xin.model.user import User
-        cls.origin_roles = xin.roles.ROLES
+        import sample.roles
+        from sample.model.user import User
+        cls.origin_roles = sample.roles.ROLES
         cls.origin_roles_choices = User._fields['role'].choices
         roles = {
             'role-1': [],  # Role with no permissions
             'role_on_user': p.user  # Role with a PolicyTree
         }
-        xin.roles.ROLES = roles
+        sample.roles.ROLES = roles
         User._fields['role'].choices = list(roles.keys())
         super().setup_class()
 
     @classmethod
     def teardown_class(cls):
         # Undo the monkey patching
-        import xin.roles
-        from xin.model.user import User
-        xin.roles.ROLES = cls.origin_roles
+        import sample.roles
+        from sample.model.user import User
+        sample.roles.ROLES = cls.origin_roles
         User._fields['role'].choices = cls.origin_roles_choices
 
     def test_change_self_role(self, user):

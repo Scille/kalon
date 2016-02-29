@@ -2,7 +2,7 @@ from marshmallow import ValidationError
 # Republishing the default fields...
 from marshmallow_mongoengine.fields import *  # noqa
 
-from core.view_util.schema import UnknownCheckedSchema
+from kalon.view_util.schema import UnknownCheckedSchema
 
 
 # ...and add custom ones
@@ -104,7 +104,7 @@ from marshmallow_mongoengine import register_field, register_field_builder
 from marshmallow_mongoengine.conversion.fields import (
     ReferenceBuilder, ListBuilder, EmbeddedDocumentBuilder, GenericReferenceBuilder)
 
-from core.model_util import fields as me_fields
+from kalon.model_util import fields as me_fields
 
 
 class ReferenceBuilder(ReferenceBuilder):

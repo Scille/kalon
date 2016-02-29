@@ -4,8 +4,8 @@ from base64 import b64decode, b64encode
 from datetime import datetime
 
 from tests import common
-from xin.model.user import User
-from core.auth import generate_access_token, generate_remember_me_token
+from sample.model.user import User
+from kalon.auth import generate_access_token, generate_remember_me_token
 
 
 @pytest.fixture

@@ -4,3 +4,6 @@ Backend demo
 ============
 
 Scille Backend backbone demo.
+
+- kalon: the backend stack
+- sample: sample application using kalon
