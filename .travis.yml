@@ -1,0 +1,16 @@
+sudo: false
+language: python
+services:
+- mongodb
+python:
+- '3.5'
+- '3.4'
+install:
+- pip install coveralls
+- pip install -r dev-requirements.txt
+- pip install -U .
+before_script:
+- flake8 .
+script: py.test --cov=kalon
+after_success:
+- coveralls

@@ -1,4 +1,4 @@
-[ ![Codeship Status for Scille/xin-back](https://codeship.com/projects/22b47050-4399-0133-a04d-7a5bd4fdedca/status?branch=master)](https://codeship.com/projects/104129)
+[![Build Status](https://travis-ci.org/Scille/kalon.svg?branch=master)](https://travis-ci.org/Scille/kalon)
 
 Backend demo
 ============
