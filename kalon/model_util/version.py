@@ -53,12 +53,8 @@ class VersionedDocument(Document):
                 kwargs['save_condition']['doc_version'] = self.doc_version
         try:
             return super().save(*args, **kwargs)
-        except mongoengine.errors.OperationError as e:
-            # TODO: fix this when https://github.com/MongoEngine/mongoengine/pull/1070 is upstream
-            if type(e) is mongoengine.errors.OperationError:
-                raise ConcurrencyError()
-            else:
-                raise
+        except mongoengine.errors.SaveConditionError as e:
+            raise ConcurrencyError(e)
 
 
 class HistorizedDocument(VersionedDocument):

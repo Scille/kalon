@@ -5,9 +5,9 @@ from tests import common
 from tests.fixtures import *
 
 from kalon.model_util import (Document, HistorizedDocument, BaseController,
-                              ControlledDocument, VersionedDocument)
+                              ControlledDocument, VersionedDocument, fields)
 from kalon.concurrency import ConcurrencyError
-from sample.model import fields
+
 
 class TestController(common.BaseTest):
 
