@@ -2,12 +2,8 @@
 Centralize the events
 """
 
-from flask.ext.restful import Resource
-
 from kalon.tools import Tree
-from kalon.auth import current_user, login_required
-
-from sample.permissions import POLICIES as p
+from kalon.auth import current_user
 
 
 class Event:

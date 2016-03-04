@@ -36,7 +36,7 @@ class AESCipher:
 
     @staticmethod
     def unpad(s):
-        return s[:-ord(s[len(s)-1:])]
+        return s[:-ord(s[len(s) - 1:])]
 
     @staticmethod
     def set_key(key):

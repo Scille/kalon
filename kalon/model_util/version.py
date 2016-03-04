@@ -107,7 +107,7 @@ class HistorizedDocument(VersionedDocument):
         class HistoryItem(Document):
             meta = {'collection': collection}
             origin = mongoengine.ReferenceField(cls, required=True)
-            author = mongoengine.ReferenceField('User') # TODO should be configurable
+            author = mongoengine.ReferenceField('User')  # TODO should be configurable
             # content = mongoengine.DictField()
             content = mongoengine.StringField()
             action = mongoengine.StringField(choices=['CREATE', 'UPDATE', 'DELETE'], required=True)

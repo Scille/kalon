@@ -147,9 +147,11 @@ class Tree:
     def __init__(self, nodes, basename=''):
         self.nodes = []
         if basename:
-            make = lambda *args: basename + '.' + '.'.join(args)
+            def make(*args):
+                return basename + '.' + '.'.join(args)
         else:
-            make = lambda *args: '.'.join(args)
+            def make(*args):
+                return '.'.join(args)
         if isinstance(nodes, dict):
             for key, value in nodes.items():
                 self._set_leaf(key, self.__class__(value, make(key)))

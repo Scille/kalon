@@ -2,7 +2,6 @@ import logging
 import requests
 from os.path import abspath, dirname
 from flask import current_app, make_response
-from flask_mail import Mail
 
 from kalon.core_app import CoreApp
 
